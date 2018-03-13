@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="student"
+            type="com.yousuf.shawon.roomtest.db.entity.Student"/>
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <LinearLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            tools:context="com.yousuf.shawon.roomtest.AddNewActivity">
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editTextInput"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Name"
+                android:text="@{student.getName()}"/>
+
+            <EditText
+                android:id="@+id/editTextRoll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editTextInput"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Roll"
+                android:text='@{ student == null ? "" :  String.valueOf(student.getRoll())}'
+                />
+
+            <EditText
+                android:id="@+id/editTextDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editTextInput"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Department"
+                android:text="@{student.getDepartment()}"
+                />
+
+            <EditText
+                android:id="@+id/editTextResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/editTextInput"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Result"
+                android:text='@{ student == null ? "" : String.valueOf(student.getResult())}'
+                />
+        </LinearLayout>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_done" />
+
+    </RelativeLayout>
+
+
+
+
+</layout>

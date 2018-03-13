@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RoomTest</string>
+    <string name="edit_student">Edit Student Info</string>
+    <string name="add_student">Add Student Info</string>
+</resources>
